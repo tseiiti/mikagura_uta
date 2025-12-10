@@ -9,7 +9,7 @@ development:
 
 test:
   <<: *default
-  url: <%= ENV.fetch('DATABASE_URL_TESTE') %> 
+  url: postgresql://postgres:123456@postgres:5432/test
 
 production:
   url: <%= ENV.fetch('DATABASE_URL') %> 
