@@ -6,20 +6,10 @@ default: &default
 development:
   <<: *default
   url: <%= ENV.fetch('DATABASE_URL') %> 
-  # database: development
-  # username: <%= ENV.fetch('USERNAME') %>
-  # password: <%= ENV.fetch('PASSWORD') %>
-  # host: <%= ENV.fetch('HOST') %>
-  # port: <%= ENV.fetch('PORT') %>
 
 test:
   <<: *default
   url: <%= ENV.fetch('DATABASE_URL_TESTE') %> 
-  # database: test
-  # username: <%= ENV.fetch('USERNAME') %>
-  # password: <%= ENV.fetch('PASSWORD') %>
-  # host: <%= ENV.fetch('HOST') %>
-  # port: <%= ENV.fetch('PORT') %>
 
 production:
   url: <%= ENV.fetch('DATABASE_URL') %> 
